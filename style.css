@@ -1,0 +1,224 @@
+/* Reset básico y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex; /* Necesario para que el contenedor ocupe todo */
+    min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Contenedor principal del Dashboard */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+/* ==================== HEADER ==================== */
+.dashboard-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 220px; /* Mismo ancho que el sidebar */
+    right: 0;
+    height: 60px; /* Altura fija para el header */
+    z-index: 100;
+}
+
+.header-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #0056b3; /* Un color corporativo */
+}
+
+.header-user a {
+    margin-left: 15px;
+    color: #007bff;
+}
+.header-user a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================== SIDEBAR ==================== */
+.dashboard-sidebar {
+    width: 220px; /* Ancho fijo para la barra lateral */
+    background-color: #2c3e50; /* Color oscuro para el sidebar */
+    color: #ecf0f1; /* Texto claro */
+    padding-top: 20px;
+    position: fixed; /* Fija el sidebar */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; /* Scroll si el contenido es largo */
+    z-index: 101; /* Encima del header para que no se solapen mal */
+}
+
+.dashboard-sidebar nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-sidebar nav ul li a {
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
+    padding: 12px 20px;
+    color: #ecf0f1;
+    transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+    border-left: 3px solid transparent; /* Para el indicador activo */
+}
+
+.dashboard-sidebar nav ul li a:hover {
+    background-color: #34495e; /* Color un poco más claro al pasar el ratón */
+    padding-left: 25px; /* Pequeño efecto de indentación */
+}
+
+.dashboard-sidebar nav ul li a.active {
+    background-color: #1abc9c; /* Color de acento para el elemento activo */
+    border-left: 3px solid #16a085; /* Indicador visual */
+    font-weight: 500;
+}
+
+.dashboard-sidebar nav ul li a .icon {
+    margin-right: 10px;
+    /* Si usas Font Awesome u otra librería, ajusta tamaño/estilo aquí */
+    display: inline-block;
+    width: 20px; /* Ancho fijo para alinear texto */
+    text-align: center;
+}
+
+.menu-separator {
+    padding: 15px 20px 5px;
+    font-size: 0.8em;
+    color: #95a5a6; /* Color grisáceo para separadores */
+    text-transform: uppercase;
+    font-weight: 600;
+    border-top: 1px solid #34495e; /* Línea separadora */
+    margin-top: 10px;
+}
+.menu-separator:first-of-type {
+    border-top: none;
+    margin-top: 0;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.dashboard-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding: 25px;
+    margin-top: 60px; /* Deja espacio para el header fijo */
+    margin-left: 220px; /* Deja espacio para el sidebar fijo */
+    background-color: #f4f7f6;
+    overflow-y: auto; /* Permite scroll si el contenido es largo */
+}
+
+.dashboard-content h1 {
+    color: #34495e;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Estilos para la barra de acciones y tabla (Ejemplo Clientes) */
+.actions-bar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos */
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    max-width: 300px; /* Limita el ancho máximo */
+}
+
+/* Estilos básicos para botones */
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-add {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+.btn-add:hover {
+    background-color: #218838;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos para botones de acción en la tabla */
+.data-table .btn {
+    padding: 5px 8px;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+.btn-view { background-color: #17a2b8; color: white; } /* Azul info */
+.btn-edit { background-color: #ffc107; color: #333; } /* Amarillo warning */
+.btn-delete { background-color: #dc3545; color: white; } /* Rojo danger */
+
+.btn-view:hover { background-color: #138496; }
+.btn-edit:hover { background-color: #e0a800; }
+.btn-delete:hover { background-color: #c82333; }
+
+
+/* Estilos básicos para la tabla de datos */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.data-table th {
+    background-color: #e9ecef; /* Gris claro para cabeceras */
+    font-weight: 600;
+    color: #495057;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Alterna color de filas */
+}
+
+.data-table tbody tr:hover {
+    background-color: #e2e6ea; /* Resalta fila al pasar el ratón */
+}
+
+.data-table td:last-child { /* Columna de acciones */
+    text-align: center;
+    white-space: nowrap; /* Evita que los botones se partan en dos líneas */
+}
