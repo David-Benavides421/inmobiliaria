@@ -222,3 +222,104 @@ ul {
     text-align: center;
     white-space: nowrap; /* Evita que los botones se partan en dos líneas */
 }
+
+/* /inmobiliaria/styles.css */
+
+/* --- Estilos Generales --- */
+* {
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente legible */
+    background-color: #f4f7f6; /* Color de fondo suave */
+    color: #333; /* Color de texto principal */
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente (aproximado) */
+    align-items: center; /* Centrar horizontalmente */
+    min-height: 100vh; /* Asegurar que el body ocupe al menos toda la altura de la ventana */
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+/* --- Título --- */
+h1 {
+    color: #2c3e50; /* Color azul oscuro para el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    text-align: center;
+}
+
+/* --- Formulario --- */
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 30px 40px; /* Espaciado interno (vertical, horizontal) */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Ocupar el ancho disponible */
+    max-width: 400px; /* Ancho máximo para que no sea demasiado grande en pantallas anchas */
+    margin-bottom: 20px; /* Espacio debajo del formulario antes del enlace */
+}
+
+/* --- Etiquetas (Labels) --- */
+label {
+    display: block; /* Hace que la etiqueta ocupe su propia línea */
+    margin-bottom: 8px; /* Espacio debajo de la etiqueta */
+    font-weight: bold; /* Texto en negrita */
+    color: #555; /* Color gris oscuro para las etiquetas */
+}
+
+/* --- Campos de Entrada (Inputs de texto/email/password) --- */
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Ocupar todo el ancho del contenedor del formulario */
+    padding: 12px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de cada campo (reemplaza <br>) */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    font-size: 1rem; /* Tamaño de fuente estándar */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Cambia el color del borde al enfocar */
+    outline: none; /* Quita el borde de enfoque predeterminado del navegador */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Sombra sutil al enfocar */
+}
+
+/* --- Botón de Envío (Submit) --- */
+input[type="submit"] {
+    width: 100%; /* Ocupar todo el ancho */
+    padding: 12px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo azul */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente más grande */
+    font-weight: bold;
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    margin-top: 10px; /* Espacio encima del botón */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+/* --- Enlaces --- */
+a {
+    color: #007bff; /* Mismo azul que el botón */
+    text-decoration: none; /* Quitar subrayado por defecto */
+    display: block; /* Para centrarlo fácilmente */
+    text-align: center; /* Centrar el texto del enlace */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+/* --- Eliminación de <br> innecesarios --- */
+/* Puedes eliminar los <br><br> del HTML, ya que los márgenes de los inputs
+y el botón ahora manejan el espaciado vertical.
+Si decides mantenerlos, este CSS funcionará igualmente, pero
