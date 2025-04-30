@@ -35,8 +35,17 @@
                     <li class="menu-separator">Gestión Interna</li>
                     <li><a href="#empleados"><span class="icon">🧑‍💼</span> Empleados</a></li>
                     <li><a href="#usuarios"><span class="icon">👤</span> Usuarios</a></li>
+<<<<<<< HEAD
                     <li><a href="/inmobiliaria/cargos/cargos.php"><span class="icon"> 🪑</span> Cargos</a></li>
+=======
+<<<<<<< HEAD
+                    <li><a href="#cargos"><span class="icon"> SILLA</span> Cargos</a></li>
+                    <li><a href="oficinas/oficinas_crud.php"><span class="icon">🏢</span> Oficinas</a></li>
+=======
+                    <li><a href="/inmobiliaria/cargos/cargos.php"><span class="icon"> SILLA</span> Cargos</a></li>
+>>>>>>> 1ece0781edda2dfafb3699738aed39b63380e49b
                     <li><a href="#oficinas"><span class="icon">🏢</span> Oficinas</a></li>
+>>>>>>> 47867c778916b54338f69eea90bda265fa23bf8b
 
                     <li class="menu-separator">Gestión Comercial</li>
                     <li><a href="#productos"><span class="icon">📦</span> Productos</a></li>
@@ -45,10 +54,6 @@
                     <li><a href="#ordenes_compra"><span class="icon">🛒</span> Órdenes de Compra</a></li>
                     <li><a href="#almacenes"><span class="icon">🏭</span> Almacenes</a></li>
                     <li><a href="#detalle_orden"><span class="icon">📋</span> Detalle Órdenes</a></li>
-
-                    <li class="menu-separator">Facturación</li>
-                    <li><a href="#facturas"><span class="icon">📄</span> Facturas</a></li>
-                    <li><a href="#detalle_factura"><span class="icon">🧾</span> Detalle Facturas</a></li>
 
 
                     <li class="menu-separator">Cuenta</li>
