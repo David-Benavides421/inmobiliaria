@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Inmobiliaria EL GITANO</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     </head>
 <body>
     <div class="dashboard-container">
@@ -25,9 +25,9 @@
 
                     <li class="menu-separator">Gestión Principal</li>
                     <li><a href="#clientes"><span class="icon">👥</span> Clientes</a></li>
-                    <li><a href="#propietarios"><span class="icon">🔑</span> Propietarios</a></li>
+                    <li><a href="/inmobiliaria/propietarios/propietarios.php"><span class="icon">🔑</span> Propietarios</a></li>
                     <li><a href="#inmuebles"><span class="icon">🏘️</span> Inmuebles</a></li>
-                    <li><a href="#tipo_inmueble"><span class="icon">🏷️</span> Tipos de Inmueble</a></li>
+                    <li><a href="/inmobiliaria/tipo_inmueble/tipo_inmueble.php"><span class="icon">🏷️</span> Tipos de Inmueble</a></li>
                     <li><a href="#contratos"><span class="icon">📜</span> Contratos</a></li>
                     <li><a href="#visitas"><span class="icon">📅</span> Visitas</a></li>
                     <li><a href="#inspeccion"><span class="icon">🔍</span> Inspección</a></li>
@@ -35,8 +35,22 @@
                     <li class="menu-separator">Gestión Interna</li>
                     <li><a href="#empleados"><span class="icon">🧑‍💼</span> Empleados</a></li>
                     <li><a href="#usuarios"><span class="icon">👤</span> Usuarios</a></li>
+<<<<<<< HEAD
                     <li><a href="/cargos/cargos.php"><span class="icon"> SILLA</span> Cargos</a></li>
                     <li><a href="oficinas/oficinas_crud.php"><span class="icon">🏢</span> Oficinas</a></li>
+=======
+<<<<<<< HEAD
+                    <li><a href="/inmobiliaria/cargos/cargos.php"><span class="icon"> 🪑</span> Cargos</a></li>
+=======
+<<<<<<< HEAD
+                    <li><a href="#cargos"><span class="icon"> SILLA</span> Cargos</a></li>
+                    <li><a href="oficinas/oficinas_crud.php"><span class="icon">🏢</span> Oficinas</a></li>
+=======
+                    <li><a href="/inmobiliaria/cargos/cargos.php"><span class="icon"> SILLA</span> Cargos</a></li>
+>>>>>>> 1ece0781edda2dfafb3699738aed39b63380e49b
+                    <li><a href="#oficinas"><span class="icon">🏢</span> Oficinas</a></li>
+>>>>>>> 47867c778916b54338f69eea90bda265fa23bf8b
+>>>>>>> c219919963ff51905c65602192fceae789e9da76
 
                     <li class="menu-separator">Gestión Comercial</li>
                     <li><a href="#productos"><span class="icon">📦</span> Productos</a></li>
