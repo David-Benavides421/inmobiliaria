@@ -28,18 +28,9 @@
                     <li><a href="/inmobiliaria/propietarios/propietarios.php"><span class="icon">🔑</span> Propietarios</a></li>
                     <li><a href="/inmobiliaria/inmuebles/inmueble_crud.php"><span class="icon">🏘️</span> Inmuebles</a></li>
                     <li><a href="/inmobiliaria/tipo_inmueble/tipo_inmueble.php"><span class="icon">🏷️</span> Tipos de Inmueble</a></li>
-<<<<<<< HEAD
-                    <li><a href="/inmobiliaria/crud_contratos/contratos.php"><span class="icon">📜</span> Contratos</a></li>
-                    <li><a href="#visitas"><span class="icon">📅</span> Visitas</a></li>
-=======
                     <li><a href="#contratos"><span class="icon">📜</span> Contratos</a></li>
                     <li><a href="/inmobiliaria/visitas/visitas.php"><span class="icon">📅</span> Visitas</a></li>
-<<<<<<< HEAD
                     <li><a href="/inmobiliaria/inspeccion/inspecciones.php"><span class="icon">🔍</span> Inspección</a></li>
-=======
->>>>>>> 292ea35a45e2e40ac33f8bbb237bcd91faf07409
-                    <li><a href="#inspeccion"><span class="icon">🔍</span> Inspección</a></li>
->>>>>>> 6452317feed4e0a75a0313f3cd5c64356bd13364
 
                     <li class="menu-separator">Gestión Interna</li>
                     <li><a href="/inmobiliaria/crud_empleados/empleados.php"><span class="icon">🧑‍💼</span> Empleados</a></li>
@@ -62,7 +53,7 @@
 
                     <li class="menu-separator">Cuenta</li>
                     <li><a href="#perfil"><span class="icon">⚙️</span> Mi Perfil</a></li>
-                    <li><a href="#logout"><span class="icon">🚪</span> Cerrar Sesión</a></li>
+                    <li><a href="/inmobiliaria/login/login.php"><span class="icon">🚪</span> Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </aside>
