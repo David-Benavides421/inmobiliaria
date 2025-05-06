@@ -1,0 +1,145 @@
+/* ===== RESET GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== TÍTULO ===== */
+h2 {
+    margin-bottom: 20px;
+    color: #1a73e8;
+    font-size: 2em;
+}
+
+/* ===== TABLA ===== */
+table {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: #1a73e8;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95em;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===== LINKS ===== */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #1a73e8;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+a:hover {
+    background-color: #1669c1;
+    transform: scale(1.02);
+}
+
+/* ===== IMÁGENES DE INMUEBLES ===== */
+img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ===== MENSAJE DE NO REGISTROS ===== */
+td[colspan="17"] {
+    text-align: center;
+    font-style: italic;
+    padding: 30px 0;
+    color: #888;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #1a73e8;
+    }
+
+    /* Nombres de las columnas simuladas en modo móvil */
+    td:nth-child(1)::before { content: "Código"; }
+    td:nth-child(2)::before { content: "Dirección"; }
+    td:nth-child(3)::before { content: "Barrio"; }
+    td:nth-child(4)::before { content: "Ciudad"; }
+    td:nth-child(5)::before { content: "Departamento"; }
+    td:nth-child(6)::before { content: "Ubicación"; }
+    td:nth-child(7)::before { content: "Foto"; }
+    td:nth-child(8)::before { content: "Web 1"; }
+    td:nth-child(9)::before { content: "Web 2"; }
+    td:nth-child(10)::before { content: "Tipo Inmueble"; }
+    td:nth-child(11)::before { content: "Habitaciones"; }
+    td:nth-child(12)::before { content: "Alquiler"; }
+    td:nth-child(13)::before { content: "Propietario"; }
+    td:nth-child(14)::before { content: "Características"; }
+    td:nth-child(15)::before { content: "Notas"; }
+    td:nth-child(16)::before { content: "Empleado"; }
+    td:nth-child(17)::before { content: "Oficina"; }
+}
