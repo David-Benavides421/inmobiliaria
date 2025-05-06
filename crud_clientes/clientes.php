@@ -340,12 +340,19 @@ $empleados_list = obtenerEmpleados($conn);
             <input type="submit" value="<?php echo ($action === 'add') ? 'Registrar Cliente' : 'Actualizar Cliente'; ?>">
             <a href="/inmobiliaria/crud_clientes/clientes.php?action=list" style="margin-left: 10px; text-decoration:none; color: #333; padding:10px; background-color:#eee; border-radius:4px; border:1px solid #ccc;">Cancelar</a>
         </form>
+        
+
     <?php else: ?>
         <p>Acción no válida o cliente no encontrado.</p>
         <a href="/inmobiliaria/crud_clientes/clientes.php?action=list">Volver al listado</a>
     <?php endif; ?>
 
+    <br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
+
+
 </div>
+
+
 
 <?php $conn->close(); ?>
 </body>

@@ -30,6 +30,9 @@ $result = $conn->query("SELECT * FROM propietarios");
             <a href="editar_propietario.php?id=<?= $row['cod_propietario'] ?>">Editar</a> |
             <a href="eliminar_propietario.php?id=<?= $row['cod_propietario'] ?>" onclick="return confirm('¿Seguro que deseas eliminar este registro?')">Eliminar</a>
         </td>
+
     </tr>
+
     <?php } ?>
 </table>
+<br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
