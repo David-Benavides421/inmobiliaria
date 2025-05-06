@@ -1,6 +1,6 @@
 <?php
 // 1. Incluir archivo de conexión
-require '/xampp/htdocs/inmobiliaria/crud_clientes/conexion.php'; // Asegúrate que la ruta es correcta
+require '/xampp/htdocs/inmobiliaria/conexion.php'; // Asegúrate que la ruta es correcta
 
 // Verificar si la conexión se estableció (opcional pero recomendado)
 if ($conn->connect_error) {
