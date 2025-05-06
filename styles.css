@@ -222,6 +222,8 @@ ul {
     text-align: center;
     white-space: nowrap; /* Evita que los botones se partan en dos líneas */
 }
+<<<<<<< HEAD:style.css
+=======
 
 /* /inmobiliaria/styles.css */
 
@@ -323,3 +325,4 @@ a:hover {
 /* Puedes eliminar los <br><br> del HTML, ya que los márgenes de los inputs
 y el botón ahora manejan el espaciado vertical.
 Si decides mantenerlos, este CSS funcionará igualmente, pero
+>>>>>>> ff4cdcc5945f5a128632c57784fbe42821d9c3fa:styles.css

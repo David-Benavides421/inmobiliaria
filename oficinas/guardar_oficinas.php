@@ -1,16 +1,26 @@
 <?php
-$servername ='localhost';
-$username ='root';
-$password ="";
-$dbname = "inmobiliaria";
+require_once '../conexion.php';
 
-$conn = new mysqli($servername, $username,$password,$dbname);
-
-//check connection
-if( $conn ->connect_error) {
-    die("connection failed: " . $conn->connect_error);
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
-//Recibir datos
+
+$camposRequeridos = ['nombre', 'direccion', 'latitud', 'longitud', 'email', 'telefono'];
+$errores = [];
+
+foreach ($camposRequeridos as $campo) {
+    if (!isset($_POST[$campo]) || empty($_POST[$campo])) {
+        $errores[] = "El campo $campo es requerido.";
+    }
+}
+
+if (!empty($errores)) {
+    foreach ($errores as $error) {
+        echo $error . "<br>";
+    }
+    exit;
+}
+
 $nombre = $_POST['nombre'];
 $direccion = $_POST['direccion'];
 $latitud = $_POST['latitud'];
@@ -18,7 +28,7 @@ $longitud = $_POST['longitud'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 
-//Manejo de foto
+// Manejo de foto
 $foto = null;
 if (!empty($_FILES['foto']['name'])) {
     $directorio = "uploads/";
@@ -36,10 +46,11 @@ if (!empty($_FILES['foto']['name'])) {
         $foto = null; // Si hay un error, evitar guardar un enlace incorrecto
     }
 }
-// Insertar en la base de datos 
+
+// Insertar en la base de datos
 $sql = "INSERT INTO oficinas (nom_ofi, dir_ofi, latitud, longitud, foto_ofi, tel_ofi, email_ofi) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssddsss", $nombre, $direccion, $latitud, $longitud, $foto, $telefono, $email);  
+$stmt->bind_param("ssddsss", $nombre, $direccion, $latitud, $longitud, $foto, $telefono, $email);
 
 if ($stmt->execute()) {
     echo "Oficina registrada con éxito.";
