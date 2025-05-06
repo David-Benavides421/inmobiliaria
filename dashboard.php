@@ -36,7 +36,7 @@
                     <li><a href="#empleados"><span class="icon">🧑‍💼</span> Empleados</a></li>
                     <li><a href="#usuarios"><span class="icon">👤</span> Usuarios</a></li>
                     <li><a href="#cargos"><span class="icon"> SILLA</span> Cargos</a></li>
-                    <li><a href="#oficinas"><span class="icon">🏢</span> Oficinas</a></li>
+                    <li><a href="oficinas/oficinas_crud.php"><span class="icon">🏢</span> Oficinas</a></li>
 
                     <li class="menu-separator">Gestión Comercial</li>
                     <li><a href="#productos"><span class="icon">📦</span> Productos</a></li>

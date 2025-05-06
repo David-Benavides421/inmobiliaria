@@ -1,13 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "inmobiliaria";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+require_once '../conexion.php';
 
 // Obtener datos actuales de la oficina
 if (isset($_GET['cod_ofi'])) {
@@ -82,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $conn->close();
 ?>
-
-<h2>Editar Oficina</h2>
+<link rel="stylesheet" href="oficinas.css">
+<h2>Editar Oficina</h2><br><br>
 <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="cod_ofi" value="<?php echo $oficina['cod_ofi']; ?>">
     Nombre: <input type="text" name="nom_ofi" value="<?php echo $oficina['nom_ofi']; ?>"><br>

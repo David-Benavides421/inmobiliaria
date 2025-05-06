@@ -1,18 +1,8 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "inmobiliaria"; 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+require_once '../conexion.php';
 
 // Consulta para obtener los almacenes
-$sql = "SELECT cod_ofi,nom_ofi, dir_ofi, latitud, longitud, foto_ofi, tel_ofi, email_ofi FROM oficinas";
+$sql = "SELECT cod_ofi, nom_ofi, dir_ofi, latitud, longitud, foto_ofi, tel_ofi, email_ofi FROM oficinas";
 $result = $conn->query($sql);
 ?>
 
@@ -22,6 +12,8 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta De Oficinas</title>
+    <link rel="stylesheet" href="oficinas.css">
+
 </head>
 <body>
     <h2>Lista de oficinas</h2>
@@ -70,6 +62,6 @@ $result = $conn->query($sql);
         <?php } ?>
     </tbody>
 </table>
-<button type="button" onclick="window.location.href='/inmobiliaria/oficinas/oficinas_crud.php'">Oficinas</button>
+<button type="button" onclick="window.location.href='oficinas_crud.php'">Oficinas</button>
 </body>
 </html>
