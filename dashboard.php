@@ -24,16 +24,16 @@
                     <li><a href="#dashboard" class="active"><span class="icon">🏠</span> Inicio</a></li>
 
                     <li class="menu-separator">Gestión Principal</li>
-                    <li><a href="#clientes"><span class="icon">👥</span> Clientes</a></li>
+                    <li><a href="/inmobiliaria/crud_cliente/clientes.php"><span class="icon">👥</span> Clientes</a></li>
                     <li><a href="/inmobiliaria/propietarios/propietarios.php"><span class="icon">🔑</span> Propietarios</a></li>
-                    <li><a href="#inmuebles"><span class="icon">🏘️</span> Inmuebles</a></li>
+                    <li><a href="/inmobiliaria/inmuebles/inmueble_crud.php"><span class="icon">🏘️</span> Inmuebles</a></li>
                     <li><a href="/inmobiliaria/tipo_inmueble/tipo_inmueble.php"><span class="icon">🏷️</span> Tipos de Inmueble</a></li>
                     <li><a href="#contratos"><span class="icon">📜</span> Contratos</a></li>
-                    <li><a href="#visitas"><span class="icon">📅</span> Visitas</a></li>
+                    <li><a href="/inmobiliaria/visitas/visitas.php"><span class="icon">📅</span> Visitas</a></li>
                     <li><a href="#inspeccion"><span class="icon">🔍</span> Inspección</a></li>
 
                     <li class="menu-separator">Gestión Interna</li>
-                    <li><a href="#empleados"><span class="icon">🧑‍💼</span> Empleados</a></li>
+                    <li><a href="/inmobiliaria/crud_empleados/empleados.php"><span class="icon">🧑‍💼</span> Empleados</a></li>
                     <li><a href="#usuarios"><span class="icon">👤</span> Usuarios</a></li>
 <<<<<<< HEAD
                     <li><a href="/cargos/cargos.php"><span class="icon"> SILLA</span> Cargos</a></li>
