@@ -28,7 +28,7 @@
                     <li><a href="/inmobiliaria/propietarios/propietarios.php"><span class="icon">🔑</span> Propietarios</a></li>
                     <li><a href="/inmobiliaria/inmuebles/inmueble_crud.php"><span class="icon">🏘️</span> Inmuebles</a></li>
                     <li><a href="/inmobiliaria/tipo_inmueble/tipo_inmueble.php"><span class="icon">🏷️</span> Tipos de Inmueble</a></li>
-                    <li><a href="#contratos"><span class="icon">📜</span> Contratos</a></li>
+                    <li><a href="/inmobiliaria/crud_contratos/contratos.php"><span class="icon">📜</span> Contratos</a></li>
                     <li><a href="/inmobiliaria/visitas/visitas.php"><span class="icon">📅</span> Visitas</a></li>
                     <li><a href="/inmobiliaria/inspeccion/inspecciones.php"><span class="icon">🔍</span> Inspección</a></li>
 

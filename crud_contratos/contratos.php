@@ -93,5 +93,6 @@
     </fieldset>
 </form>
 
+<br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
 </body>
 </html>
