@@ -1,12 +1,11 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '\xampp1\htdocs\inmobiliaria\propietarios\propietarios.php';
 
 
 $result = $conn->query("SELECT * FROM propietarios");
 ?>
 
 <h2>Lista de Propietarios</h2>
-<a href="crear_propietario.php">Agregar nuevo propietario</a>
 <table border="1">
     <tr>
         <th>Código</th><th>Tipo Empresa</th><th>Tipo Documento</th><th>Número Documento</th>

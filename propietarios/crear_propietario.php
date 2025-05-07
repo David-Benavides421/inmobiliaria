@@ -1,38 +1,89 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $stmt = $conn->prepare("INSERT INTO propietarios (tipo_empresa, tipo_doc, num_doc, nombre_propietario, dir_propietario, tel_propietario, email_propietario, contacto_prop, tel_contacto_prop, email_contacto_prop) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssisssssss", $_POST['tipo_empresa'], $_POST['tipo_doc'], $_POST['num_doc'], $_POST['nombre_propietario'], $_POST['dir_propietario'], $_POST['tel_propietario'], $_POST['email_propietario'], $_POST['contacto_prop'], $_POST['tel_contacto_prop'], $_POST['email_contacto_prop']);
-    $stmt->execute();
-    header("Location: propietarios.php");
-}
+include '../conexion.php'
 ?>
 
-<h2>Crear Propietario</h2>
-<form method="POST">
-    Tipo Empresa:
-    <select name="tipo_empresa">
-        <option value="none"></option>
-        <option value="Persona Natural">Persona Natural</option>
-        <option value="Jurídica">Jurídica</option>
-    </select><br><br>
+<!DOCTYPE html>
+<html lang="es">
 
-    Tipo Documento:
-    <select name="tipo_doc">
-        <option value="none"></option>
-        <option value="CC">CC</option>
-        <option value="NIT">NIT</option>
-        <option value="CE">CE</option>
-    </select><br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propietarios</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
 
-    Número Documento: <input name="num_doc"><br><br>
-    Nombre: <input name="nombre_propietario"><br><br>
-    Dirección: <input name="dir_propietario"><br><br>
-    Teléfono: <input name="tel_propietario"><br><br>
-    Email: <input name="email_propietario"><br><br>
-    Contacto Propiedad: <input name="contacto_prop"><br><br>
-    Tel. Contacto Propiedad: <input name="tel_contacto_prop"><br><br>
-    Email Contacto Propiedad: <input name="email_contacto_prop"><br><br>
-    <button type="submit">Guardar</button>
-</form>
+<body>
+
+    
+
+    <form action="guardar_propietario.php" method="post">
+     <h2>Formulario Propietario</h2>
+        <label>Tipo de empresa:</label>
+        
+        <select name="tipo_empresa" id="tipo_empresa">
+            <option value="">Selecciona</option>
+            
+            <?php
+            $sqlEnum = "SHOW COLUMNS FROM propietarios LIKE 'tipo_empresa'";
+            $resultEnum = $conn->query($sqlEnum);
+            $rowEnum = $resultEnum->fetch_assoc();
+            preg_match("/^enum\((.*)\)$/", $rowEnum['Type'], $matches);
+            $enumValues = explode(",", $matches[1]);
+            foreach ($enumValues as $value) {
+                $cleanValue = trim($value, "'");
+                echo "<option value='$cleanValue'>$cleanValue</option>";
+            }
+            ?>
+            
+        </select>
+
+        <label>Tipo de documento:</label>
+        <select name="tipo_doc" id="tipo_doc">
+            <option value="">Selecciona</option>
+            
+            <?php
+            $sqlEnum = "SHOW COLUMNS FROM propietarios LIKE 'tipo_doc'";
+            $resultEnum = $conn->query($sqlEnum);
+            $rowEnum = $resultEnum->fetch_assoc();
+            preg_match("/^enum\((.*)\)$/", $rowEnum['Type'], $matches);
+            $enumValues = explode(",", $matches[1]);
+            foreach ($enumValues as $value) {
+                $cleanValue = trim($value, "'");
+                echo "<option value='$cleanValue'>$cleanValue</option>";
+            }
+            ?>
+            
+        </select>
+
+        <label>Numero de documento:</label>
+        <input type="text" name="numero_documento"><br><br>
+
+        <label>Nombre del propietario:</label>
+        <input type="text" name="nombre_propietario"><br><br>
+
+        <label>Dirección:</label>
+        <input type="text" name="direccion"><br><br>
+
+        <label>Telefono del propietario:</label>
+        <input type="text" name="telefono_propietario"><br><br>
+
+        <label>Email del propietario:</label>
+        <input type="email" name="email_propietario"><br><br>
+
+        <label>Contacto del propietario:</label>
+        <input type="text" name="contacto_propietario"><br><br>
+
+        <label>Telefono contacto:</label>
+        <input type="text" name="telefono_contacto"><br><br>
+
+        <label>Email contacto:</label>
+        <input type="email" name="email_contacto"><br><br>
+
+        <input type="submit" value="Guardar Propietario"><br><br>
+
+        <input type="button" value="Consultar" onclick="location.href='consultar_propietario.php'">
+    </form>
+
+</body>
+
+</html>
