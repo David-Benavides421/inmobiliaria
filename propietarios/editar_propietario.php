@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </select><br><br>
 
     Tipo Documento:
+    
     <select name="tipo_doc">
         <option <?= $row['tipo_doc'] == 'CC' ? 'selected' : '' ?>>CC</option>
         <option <?= $row['tipo_doc'] == 'NIT' ? 'selected' : '' ?>>NIT</option>

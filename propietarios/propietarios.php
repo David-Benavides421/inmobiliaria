@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '\xampp1\htdocs\inmobiliaria\propietarios\propietarios.php';
 
 
 $result = $conn->query("SELECT * FROM propietarios");
