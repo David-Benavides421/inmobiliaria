@@ -5,7 +5,6 @@ $resultado = $conn->query("SELECT * FROM tipo_inmueble");
 ?>
 
 <h2>Listado de Tipos de Inmuebles</h2>
-<a href="/inmobiliaria/tipo_inmueble/frm_agregar_tipo_inmueble.php">Agregar Nuevo Tipo de Inmueble</a>
 <table border="1">
     <tr>
         <th>Código del Tipo de Inmueble</th>
@@ -22,6 +21,8 @@ $resultado = $conn->query("SELECT * FROM tipo_inmueble");
             </td>
         </tr>
     <?php } ?>
-</table>
+</table> <br>
 
-<br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
+<a href="/inmobiliaria/tipo_inmueble/frm_agregar_tipo_inmueble.php">Agregar Nuevo Tipo de Inmueble</a> <br> <br>
+
+<input type="button" value="Inicio" onclick="location.href='../dashboard.php'">

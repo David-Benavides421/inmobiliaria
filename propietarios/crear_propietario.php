@@ -33,9 +33,9 @@ include '../conexion.php'
                 $cleanValue = trim($value, "'");
                 echo "<option value='$cleanValue'>$cleanValue</option>";
             }
-            ?>
+            ?> 
             
-        </select>
+        </select><br><br>
 
         <label>Tipo de documento:</label>
         <select name="tipo_doc" id="tipo_doc">
@@ -53,7 +53,7 @@ include '../conexion.php'
             }
             ?>
             
-        </select>
+        </select><br><br>
 
         <label>Numero de documento:</label>
         <input type="text" name="numero_documento"><br><br>

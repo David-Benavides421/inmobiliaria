@@ -205,7 +205,6 @@ $inmuebles_dropdown = obtenerInmuebles($conn);
 
     <?php if ($action === 'list'): ?>
         <h2>Listado de Visitas</h2>
-        <a href="visitas.php?action=add" class="actions add">Registrar Nueva Visita</a>
         <table>
             <thead>
                 <tr>
@@ -289,9 +288,11 @@ $inmuebles_dropdown = obtenerInmuebles($conn);
     <?php else: ?>
         <p>Acción no válida o visita no encontrada.</p>
         <a href="visitas.php?action=list">Volver al listado</a>
-    <?php endif; ?>
+    <?php endif; ?> <br>
 
-    <br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
+    <a href="visitas.php?action=add" class="actions add">Registrar Nueva Visita</a><br>
+
+    <br><input type="button" value="Inicio" onclick="location.href='../dashboard.php'"><br>
 </div>
 
 <?php $conn->close(); ?>

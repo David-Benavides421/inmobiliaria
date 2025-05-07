@@ -31,15 +31,13 @@ function getEnumValues($conn, $table, $column) {
     }, $enumValues);
 }
 
-// Obtener los valores del enum para tipo_empresa
-$tipoEmpresaValues = getEnumValues($conn, 'propietarios', 'tipo_empresa');
-
-// Obtener los valores del enum para tipo_doc
+// Obtener los valores del enum
 $tipoDocValues = getEnumValues($conn, 'propietarios', 'tipo_doc');
+$tipoEmpresaValues = getEnumValues($conn, 'propietarios', 'tipo_empresa');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,16 +49,8 @@ $tipoDocValues = getEnumValues($conn, 'propietarios', 'tipo_doc');
         <h1>Editar Propietario</h1>
         <input type="hidden" name="cod_propietarios" value="<?php echo $propietario['cod_propietarios']; ?>">
 
-    Tipo Documento:
-    
-    <select name="tipo_doc">
-        <option <?= $row['tipo_doc'] == 'CC' ? 'selected' : '' ?>>CC</option>
-        <option <?= $row['tipo_doc'] == 'NIT' ? 'selected' : '' ?>>NIT</option>
-        <option <?= $row['tipo_doc'] == 'CE' ? 'selected' : '' ?>>CE</option>
-    </select><br><br>
-
-        <label for="tipo_documento">Tipo de documento:</label>
-        <select name="tipo_documento" id="tipo_documento">
+        <label for="tipo_doc">Tipo de Documento:</label>
+        <select name="tipo_doc" id="tipo_doc">
             <option value="">Seleccionar</option>
             <?php
             foreach ($tipoDocValues as $value) {

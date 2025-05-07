@@ -4,4 +4,5 @@
     <input type="text" name="nom_cargo" required>
     <br><br>
     <input type="submit" value="Guardar">
+    <input type="button" value="Inicio" onclick="location.href='../dashboard.php'">
 </form>

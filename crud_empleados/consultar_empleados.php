@@ -71,11 +71,6 @@ if (!$resultado) {
 
 <div class="contenedor">
     <h2>Listado de Empleados</h2>
-
-    <div class="acciones-superiores">
-        <a href="/inmobiliaria/crud_empleados/empleados.php" class="boton boton-crear">Registrar Nuevo Empleado</a> <!-- Asumiendo que tienes una página para registrar -->
-    </div>
-
     <table>
         <thead>
             <tr>
@@ -128,7 +123,9 @@ if (!$resultado) {
         </tbody>
     </table>
 </div>
-
+<div class="acciones-superiores">
+        <a href="/inmobiliaria/crud_empleados/empleados.php" class="boton boton-crear">Registrar Nuevo Empleado</a> <!-- Asumiendo que tienes una página para registrar -->
+    </div>
 </body>
 </html>
 

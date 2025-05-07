@@ -123,6 +123,7 @@ include '../conexion.php';
 
         <button type="submit">Guardar Inmueble</button>
         <input type="button" value="Consultar" onclick="location.href='consultar_inmueble.php'">
+        <input type="button" value="Inicio" onclick="location.href='../dashboard.php'">
     </form>
 
     <script>
@@ -160,4 +161,3 @@ include '../conexion.php';
 </body>
 </html>
 
-<br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>

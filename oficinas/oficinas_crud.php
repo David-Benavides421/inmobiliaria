@@ -33,6 +33,7 @@
 
         <button type="submit">Guardar Oficinas</button>
         <button type="button" onclick="window.location.href='/inmobiliaria/oficinas/consultar_oficinas.php'">Consultar Oficinas</button>
+        <input type="button" value="Inicio" onclick="location.href='../dashboard.php'">
     </form>
     <script>
         //Iniciar el mapa

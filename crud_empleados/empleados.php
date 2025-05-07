@@ -136,7 +136,7 @@
     </form>
   </div>
 
-  <br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
+  <input type="button" value="Inicio" onclick="location.href='../dashboard.php'">
 </div>
 
 </body>

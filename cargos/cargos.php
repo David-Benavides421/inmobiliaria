@@ -5,7 +5,6 @@ $resultado = $conn->query("SELECT * FROM cargos");
 ?>
 
 <h2>Listado de Cargos</h2>
-<a href="/inmobiliaria/cargos/frm_agregar_cargo.php">Agregar Nuevo Cargo</a>
 <table border="1">
     <tr>
         <th>Código</th>
@@ -22,5 +21,8 @@ $resultado = $conn->query("SELECT * FROM cargos");
             </td>
         </tr>
     <?php } ?>
-</table>
-<br><button onclick="window.history.back();" style="padding:10px 20px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;">Volver atrás</button><br>
+</table><br>
+<input type="button" value="Inicio" onclick="location.href='../dashboard.php'"><br><br>
+
+<a href="/inmobiliaria/cargos/frm_agregar_cargo.php">Agregar Nuevo Cargo</a>
+<br><br>

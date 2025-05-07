@@ -79,7 +79,7 @@ $stmt->bind_param(
 if ($stmt->execute()) {
     echo "<script>
         alert('Inmueble registrado correctamente.');
-        window.location.href = 'inmuebles_crud.php';
+        window.location.href = 'inmueble_crud.php';
     </script>";
 } else {
     echo "<script>
