@@ -51,16 +51,13 @@ $tipoDocValues = getEnumValues($conn, 'propietarios', 'tipo_doc');
         <h1>Editar Propietario</h1>
         <input type="hidden" name="cod_propietarios" value="<?php echo $propietario['cod_propietarios']; ?>">
 
-        <label for="tipo_empresa">Tipo de empresa:</label>
-        <select name="tipo_empresa" id="tipo_empresa">
-            <option value="">Seleccionar</option>
-            <?php
-            foreach ($tipoEmpresaValues as $value) {
-                $selected = ($value == $propietario['tipo_empresa']) ? 'selected' : '';
-                echo "<option value='$value' $selected>$value</option>";
-            }
-            ?>
-        </select><br><br>
+    Tipo Documento:
+    
+    <select name="tipo_doc">
+        <option <?= $row['tipo_doc'] == 'CC' ? 'selected' : '' ?>>CC</option>
+        <option <?= $row['tipo_doc'] == 'NIT' ? 'selected' : '' ?>>NIT</option>
+        <option <?= $row['tipo_doc'] == 'CE' ? 'selected' : '' ?>>CE</option>
+    </select><br><br>
 
         <label for="tipo_documento">Tipo de documento:</label>
         <select name="tipo_documento" id="tipo_documento">
