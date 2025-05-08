@@ -1,6 +1,6 @@
 <?php
 session_start(); // Para mensajes de estado (opcional pero útil)
-require '/xampp/htdocs/inmobiliaria/conexion.php'; // Asegúrate que la ruta es correcta
+require '../conexion.php'; // Asegúrate que la ruta es correcta
 
 // --- FUNCIONES AUXILIARES PARA DESPLEGABLES ---
 function obtenerTiposInmueble($conn) {

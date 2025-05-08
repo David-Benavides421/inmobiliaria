@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conn->prepare("INSERT INTO inspeccion (fecha_ins, cod_imm, cod_emp, comentario) VALUES (?, ?, ?, ?)");

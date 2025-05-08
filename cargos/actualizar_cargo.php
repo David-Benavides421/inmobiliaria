@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 $codigo = $_POST['cod_cargo'];
 $nombre = $_POST['nom_cargo'];

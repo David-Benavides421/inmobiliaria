@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 $codigo = $_GET['cod_cargo'];
 $sql = "DELETE FROM cargos WHERE cod_cargo = $codigo";

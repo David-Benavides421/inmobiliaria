@@ -2,7 +2,7 @@
 // Este archivo debe establecer tu conexión a la base de datos y hacer que el objeto $conn esté disponible.
 // Asegúrate de que se conecta a la base de datos correcta ('inmobiliaria' según tus mensajes de error).
 // Verifica que los detalles de conexión (servidor, usuario, contraseña, nombre de la base de datos) en conexion.php sean correctos.
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 // Verifica si la conexión a la base de datos fue exitosa
 if ($conn->connect_error) {

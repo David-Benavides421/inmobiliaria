@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 $resultado = $conn->query("SELECT * FROM tipo_inmueble");
 ?>

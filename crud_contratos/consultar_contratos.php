@@ -24,7 +24,7 @@
 <h2>Listado de Contratos</h2>
 
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 if ($conn->connect_error) {
     die("Error de conexión a la base de datos: " . $conn->connect_error);

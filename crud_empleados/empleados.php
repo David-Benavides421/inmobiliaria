@@ -73,7 +73,7 @@
       <select name="cod_cargo" required>
         <option value="">-- Seleccione --</option>
         <?php
-          require '/xampp/htdocs/inmobiliaria/conexion.php';
+          require '../conexion.php';
           $cargo = $conn->query("SELECT cod_cargo, nom_cargo FROM cargos ORDER BY nom_cargo");
           while ($row = $cargo->fetch_assoc()) {
             echo "<option value='{$row["cod_cargo"]}'>" . htmlspecialchars($row["nom_cargo"]) . "</option>";

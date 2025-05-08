@@ -1,6 +1,6 @@
 <?php
 // Requerir archivo de conexión
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 // Verificar si el CÓDIGO del empleado está presente y es numérico
 // Usamos cod_emp (clave primaria) en lugar de ced_emp

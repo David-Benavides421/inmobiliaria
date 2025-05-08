@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 // Consultar todos los empleados con sus cargos y oficinas
 $resultado = $conn->query("SELECT e.*, c.nom_cargo, o.nom_ofi 

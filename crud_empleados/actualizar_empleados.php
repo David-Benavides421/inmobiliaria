@@ -1,6 +1,6 @@
 <?php
 // Requerir el archivo de conexión - Ajusta la ruta si es necesario
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 // Verificar si el formulario fue enviado usando el método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

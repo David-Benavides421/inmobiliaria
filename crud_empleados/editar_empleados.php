@@ -1,6 +1,6 @@
 <?php
 // Requerir el archivo de conexión - Ajusta la ruta si es necesario
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 // Verificar si se proporcionó cod_emp en la URL y si es numérico
 if (!isset($_GET['cod_emp']) || !is_numeric($_GET['cod_emp'])) {

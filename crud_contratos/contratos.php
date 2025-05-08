@@ -46,7 +46,7 @@
         <select name="cod_cli" required>
             <option value="">-- Seleccione --</option>
             <?php
-                require '/xampp/htdocs/inmobiliaria/conexion.php';
+                require '../conexion.php';
                 $clientes = $conn->query("SELECT cod_cli, nom_cli FROM clientes ORDER BY nom_cli");
                 while ($row = $clientes->fetch_assoc()) {
                     echo "<option value='{$row["cod_cli"]}'>" . htmlspecialchars($row["nom_cli"]) . "</option>";

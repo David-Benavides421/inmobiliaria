@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/inmobiliaria/conexion.php';
+require '../conexion.php';
 
 $codigo = $_GET['cod_cargo'];
 $resultado = $conn->query("SELECT * FROM cargos WHERE cod_cargo = $codigo");

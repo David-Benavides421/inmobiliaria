@@ -36,7 +36,7 @@
                     <li><a href="/inmobiliaria/crud_empleados/empleados.php"><span class="icon">🧑‍💼</span> Empleados</a></li>
                     <li><a href="#usuarios"><span class="icon">👤</span> Usuarios</a></li>
 
-                    <li><a href="/inmobiliaria/oficinas/consultar_oficinas.php"><span class="icon">🏢</span> Oficinas</a></li>
+                    <li><a href="/inmobiliaria/oficinas/oficinas_crud.php"><span class="icon">🏢</span> Oficinas</a></li>
 
                     <li><a href="/inmobiliaria/cargos/cargos.php"><span class="icon"> 🪑</span> Cargos</a></li>
 
